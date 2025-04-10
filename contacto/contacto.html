@@ -1,14 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contactanos</title>
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 <body>
     <header>
-        <h1>Inteligencia Artificial</h1>
+        <h1>Inteligencia Artificial - Contacténos</h1>
+
+        <h2>Formulario De Contacto</h2>
+
+  <form id="miFormulario">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required><br><br>
+
+    <label for="email">Correo electrónico:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="telefono">Número de teléfono:</label><br>
+    <input type="tel" id="telefono" name="telefono" required><br><br>
+
+    <label for="estudiosIA">¿Tienes estudios previos en IA?</label><br>
+    <select id="estudiosIA" name="estudiosIA" required>
+        <option value="">Selecciona una opción</option>
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+    </select><br><br>
+
+    <label for="interesBootcamp">¿Te interesa unirte a un bootcamp de IA?</label><br>
+    <input type="radio" id="interesSi" name="interesBootcamp" value="si" required>
+    <label for="interesSi">Sí</label>
+    <input type="radio" id="interesNo" name="interesBootcamp" value="no">
+    <label for="interesNo">No</label><br><br>
+
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" name="mensaje" rows="4" cols="40" required></textarea><br><br>
+
+    <input type="submit" value="Enviar"><br><br>
+  </form>
+
+  <div id="respuesta"></div><br><br>
+
+  <script>
+    document.getElementById('miFormulario').addEventListener('submit', function(e) {
+      e.preventDefault(); // evita que se recargue la página
+
+      // Obtener los valores del formulario
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const telefono = document.getElementById('telefono').value;
+      const estudiosIA = document.getElementById('estudiosIA').value;
+      const interesBootcamp = document.getElementById('interesBootcamp').value;
+      const mensaje = document.getElementById('mensaje').value;
+
+      // Aquí iría la lógica para enviar a un servidor (ej: fetch a una API)
+      console.log('Enviando:', { nombre, email, telefono, estudiosIA, interesBootcamp, mensaje });
+
+      // Simulación de envío exitoso
+      document.getElementById('respuesta').innerText = 'Formulario enviado con éxito, estaremos en contacto.';
+
+      // Resetear el formulario
+      e.target.reset();
+    });
+  </script>
+
     </header>
     <nav>
         <a href="/inicio/index.html">Inicio</a> |
@@ -16,5 +73,6 @@
         <a href="/quienesSomos/quienesSomos.html">Quienes Somos</a>
     </nav>
     
+    <script src="contactof.js"></script>
 </body>
 </html>
