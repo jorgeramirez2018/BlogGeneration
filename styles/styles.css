@@ -43,3 +43,76 @@ nav a{
 nav a:hover {
     background-color: #5a6e77; 
 }
+
+
+.banner{
+    padding: 80px 100px;
+    display: flex;
+    flex-direction: column;
+    background-color: #d4d4ff;
+    align-items: center;
+
+}
+
+.banner img{
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    padding: 80px 100px;
+}
+
+.cubos {
+    display: flex;
+    align-items: top;
+}
+
+.info img{
+    width: 150px;
+    height: 150px;
+}
+
+
+.info div {
+    padding: 40px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 10px;
+    max-width: 300px;
+    text-align: left;
+    background-color: #a0b0b8;
+}
+
+
+
+.info h4 {
+    font-weight: 500;
+    font-size: 20px;
+    color: #000000;
+    
+}
+
+.info p {
+    font-weight: 200;
+    font-size: 16px;
+    color: #17142c;
+}
+.info #btn1{
+    border: 1px solid #30147e;
+    background: #30147e;
+    color: #c7c5df;
+    padding: 10px;
+    cursor: pointer;
+    min-width: min-content;
+    max-width: 50%;
+}
+
+.info #btn1:hover{
+    border: 1px solid #c7c5df;
+    background: #c7c5df;
+    color: #30147e;
+}
